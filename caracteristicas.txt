@@ -1,0 +1,12 @@
+navbar
+header con imagen y texto centrado vertical
+jumbotron
+breadcrumbs
+buttons #distintos colores para distintas acciones
+headings (h1, h2, h3...)
+parrafos
+links #distintos colores
+tarjetas sin imagen
+tarjetas con imagen
+container
+grid

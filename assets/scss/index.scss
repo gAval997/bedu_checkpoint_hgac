@@ -1,0 +1,276 @@
+$cols-width: 8.333333;
+$navbar-bgcol: #F7FFFC;
+$element-bgcol: #e4e4e4;
+$header-height: 30vh;
+$color-success: #53ff4a;
+$color-info: #98fff3;
+$color-danger: #ff9090;
+$color-warning: #ffd558;
+
+h1 {
+	text-transform: uppercase;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.container-fluid {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.row {
+	display: flex;
+}
+
+.header {
+	position: relative;
+
+	img {
+		width: 100%;
+		height: $header-height;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	.overlay {
+		position: absolute;
+		width: 100%;
+		height: 30vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 2;
+	}
+
+	p {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		font-size: 2em;
+		color: white;
+		z-index: 3;
+		transform: translate(-50%,-50%);
+	}
+}
+
+.element {
+	margin-left: 5%;
+	width: 90%;
+	background-color: $element-bgcol;
+	border: 1px dashed #171717;
+}
+
+.grid {
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1em;
+
+	.grid-cell {
+		background-color: #ddb3cc;
+		height: 5em;
+		text-align: center;
+	}
+}
+
+.pargraph {
+	width: 95%;
+	margin: 0 auto;
+	border-radius: 5px;
+	background-color: #bbbbbb;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.card {
+	width: 100%;
+	text-align: center;
+	background-color: #d9d7d7;
+	border-radius: 0.5em;
+
+	.card-header {
+		border-bottom: 1px solid white;
+	}
+
+	.card-content {
+		margin: 0 auto;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.card-footer {
+		border-top: 1px solid white;
+	}
+}
+
+.link {
+	color: #e630fc;
+	text-decoration: underline;
+
+	&:hover {
+		color: #7e008e;
+	}
+}
+
+.navbar {
+	background-color: $navbar-bgcol;
+	position: relative;
+	border: 1px solid black;
+	height: 2.5em;
+	color: black;
+	font-weight: bold;
+
+	.navbar-element {
+	  margin-left: 1em;
+	  margin-right: 1em;
+	  padding-top: 0.5em;
+	}
+}
+
+.breadcrumb {
+	display: inline-block;
+	color: #000d2f;
+
+	.breadcrumb-item {
+		display: inline-block;
+	}
+
+	.active {
+		color: #0032b4;
+	}
+
+	.son::before, .active::before {
+		content: " / "
+	}
+}
+
+.center-content {
+	margin: 0 auto;
+}
+
+.btn {
+	border-radius: 0.5em;
+
+	&-success {
+		background-color: $color-success;
+	}
+
+	&-info {
+		background-color: $color-info;
+	}
+
+	&-danger {
+		background-color: $color-danger;
+	}
+
+	&-warning {
+		background-color: $color-warning;
+	}
+
+	&-lg {
+		width: 20em;
+		height: 3em;
+	}
+}
+
+@mixin jumbotron-text-color() {
+	color: black;
+}
+
+.jumbotron {
+	width: 90%;
+	margin: 0 auto;
+	background-color: #d4d4d4;
+	border-radius: 0.5em;
+	text-align: center;
+
+	.cont {
+		@include jumbotron-text-color();
+	}
+}
+
+// Draws container columns
+@for $col from 1 to 13 {
+	.col-#{$col} {
+		display: flex;
+		width: ($col * $cols-width) * 1%;
+	}
+}
+
+// Margin top
+@for $mt from 1 to 6 {
+	.mt-#{$mt} {
+		margin-top: ($mt) * 1em;
+	}
+}
+
+// Margin left
+@for $ml from 1 to 6 {
+	.ml-#{$ml} {
+		margin-left: ($ml) * 1em;
+	}
+}
+
+// Margin right
+@for $mr from 1 to 6 {
+	.mr-#{$mr} {
+		margin-right: ($mr) * 1em;
+	}
+}
+
+// Margin bottom
+@for $mb from 1 to 6 {
+	.mb-#{$mb} {
+		margin-bottom: ($mb) * 1em;
+	}
+}
+
+// Padding top
+@for $pt from 1 to 6 {
+	.pt-#{$pt} {
+		padding-top: ($pt) * 1em;
+	}
+}
+
+// Padding bottom
+@for $pb from 1 to 6 {
+	.pb-#{$pb} {
+		padding-bottom: ($pb) * 1em;
+	}
+}
+
+// Padding left
+@for $pl from 1 to 6 {
+	.pl-#{$pl} {
+		padding-left: ($pl) * 1em;
+	}
+}
+
+// Padding right
+@for $pr from 1 to 6 {
+	.pr-#{$pr} {
+		padding-right: ($pr) * 1em;
+	}
+}
+
+// Headings
+@for $heading from 1 to 7 {
+	.h#{$heading} {
+		font-size: (8 - $heading) * 0.5em;
+	}
+}

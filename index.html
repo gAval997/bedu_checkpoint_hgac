@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Checkpoint</title>
+		<link rel="stylesheet" href="./assets/css/index.css">
+	</head>
+	<body>
+		<div class="element">
+			<h1>NAVBAR</h1>
+			<div class="navbar">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="navbar-element">Home</div>
+						<div class="navbar-element">Catalog</div>
+						<div class="navbar-element">About Us</div>
+					</div>
+				</div>
+			</div>
+			<xmp>
+	#HTML
+	<div class="navbar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="navbar-element">Home</div>
+				<div class="navbar-element">Catalog</div>
+				<div class="navbar-element">About Us</div>
+			</div>
+		</div>
+	</div>
+
+	#CSS
+	.navbar {
+	  background-color: #F7FFFC;
+	  position: relative;
+	  border: 1px solid black;
+	  height: 2.5em;
+	  color: black;
+	  font-weight: bold;
+	}
+
+	.navbar .navbar-element {
+	  margin-left: 1em;
+	  margin-right: 1em;
+	  padding-top: 0.5em;
+	}
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>HEADER</h1>
+			<div class="header">
+				<div class="overlay"></div>
+				<p>ESTO ES UN ENCABEZADO</p>
+				<img src="./assets/images/header.jpg" alt="Header Image">
+			</div>
+			<xmp>
+#HTML
+<div class="header">
+	<div class="overlay"></div>
+	<p>ESTO ES UN ENCABEZADO</p>
+	<img src="./assets/images/header.jpg" alt="Header Image">
+</div>
+
+#CSS
+.header {
+  position: relative;
+}
+
+.header img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header .overlay {
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.header p {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  font-size: 2em;
+  color: white;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>jumbotron</h1>
+			<div class="jumbotron">
+				<div class="cont pb-2">
+					<h1 class="pt-1">JUMBOTRON CONTENT</h1>
+					<button class="btn btn-info btn-lg" type="button">SALUDOS</button>
+				</div>
+			</div>
+			<xmp>
+#HTML
+<div class="jumbotron">
+	<div class="cont">
+		<h1>JUMBOTRON CONTENT</h1>
+		<button class="btn btn-info btn-lg" type="button">SALUDOS</button>
+	</div>
+</div>
+
+#CSS
+.jumbotron {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #d4d4d4;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.jumbotron .cont {
+  color: black;
+}
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>BREADCRUMBS</h1>
+			<div class="breadcrumb">
+				<p class="breadcrumb-item">Inicio</p>
+				<p class="breadcrumb-item son">Hijo de Inicio</p>
+				<p class="breadcrumb-item active">Nieto de Inicio</p>
+			</div>
+			<xmp>
+#HTML
+<div class="breadcrumb">
+	<p class="breadcrumb-item">Inicio</p>
+	<p class="breadcrumb-item son">Hijo de Inicio</p>
+	<p class="breadcrumb-item active">Nieto de Inicio</p>
+</div>
+
+#CSS
+.breadcrumb {
+  display: inline-block;
+  color: #000d2f;
+}
+
+.breadcrumb .breadcrumb-item {
+  display: inline-block;
+}
+
+.breadcrumb .active {
+  color: #0032b4;
+}
+
+.breadcrumb .son::before, .breadcrumb .active::before {
+  content: " / ";
+}
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>BUTTONS AND COLORS BY MEANING</h1>
+			<div class="container-fluid">
+				<div class="center-content">
+					<button type="button" class="btn btn-lg btn-info">Info</button>
+					<button type="button" class="btn btn-lg btn-success">Success</button>
+					<button type="button" class="btn btn-lg btn-warning">Warning</button>
+					<button type="button" class="btn btn-lg btn-danger mb-2">Danger</button>
+				</div>
+			</div>
+			<xmp>
+#HTML
+<div class="container-fluid">
+	<div class="center-content">
+		<button type="button" class="btn btn-lg btn-info">Info</button>
+		<button type="button" class="btn btn-lg btn-success">Success</button>
+		<button type="button" class="btn btn-lg btn-warning">Warning</button>
+		<button type="button" class="btn btn-lg btn-danger mb-2">Danger</button>
+	</div>
+</div>
+
+#CSS
+.btn {
+  border-radius: 0.5em;
+}
+
+.btn-success {
+  background-color: #53ff4a;
+}
+
+.btn-info {
+  background-color: #98fff3;
+}
+
+.btn-danger {
+  background-color: #ff9090;
+}
+
+.btn-warning {
+  background-color: #ffd558;
+}
+
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>Headings (h1, h2, h3 ...)</h1>
+			<div class="text-center">
+				<div class="h1">h1</div>
+				<div class="h2">h2</div>
+				<div class="h3">h3</div>
+				<div class="h4">h4</div>
+				<div class="h5">h5</div>
+				<div class="h6">h6</div>
+			</div>
+			<xmp>
+#HTML
+<div class="text-center">
+	<div class="h1">h1</div>
+	<div class="h2">h2</div>
+	<div class="h3">h3</div>
+	<div class="h4">h4</div>
+	<div class="h5">h5</div>
+	<div class="h6">h6</div>
+</div>
+
+#CSS
+.h1 {
+  font-size: 3.5em;
+}
+
+.h2 {
+  font-size: 3em;
+}
+
+.h3 {
+  font-size: 2.5em;
+}
+
+.h4 {
+  font-size: 2em;
+}
+
+.h5 {
+  font-size: 1.5em;
+}
+
+.h6 {
+  font-size: 1em;
+}
+
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>Parrafos</h1>
+			<p class="pargraph mb-1">
+				Parrafo 1
+			</p>
+			<p class="pargraph mt-1">
+				Parrafo 2
+			</p>
+			<xmp>
+#HTML
+<p class="pargraph mb-1">
+	Parrafo 1
+</p>
+<p class="pargraph mt-1">
+	Parrafo 2
+</p>
+
+#CSS
+.pargraph {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #bbbbbb;
+}
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>ENLACES</h1>
+			<a href="#" class="link">ENLACE 1</a>
+			<a href="#" class="link">ENLACE 2</a>
+			<a href="#" class="link">ENLACE 3</a>
+			<xmp>
+#HTML
+<a href="#" class="link">ENLACE 1</a>
+<a href="#" class="link">ENLACE 2</a>
+<a href="#" class="link">ENLACE 3</a>
+
+#CSS
+.link {
+  color: #e630fc;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #7e008e;
+}
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>Tarjetas</h1>
+			<div class="container">
+				<p class="h5">Sin imagenes:</p>
+				<div class="row">
+					<div class="col-4 pl-1">
+						<div class="card">
+							<div class="card-header">
+								<p>CARD HEADER 1</p>
+							</div>
+							<div class="card-content">
+								<p>CARD CONTENT (NO-IMAGE)</p>
+							</div>
+							<div class="card-footer">
+								<p>CARD FOOTER</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 pl-1">
+						<div class="card">
+							<div class="card-header">
+								<p>CARD HEADER 2</p>
+							</div>
+							<div class="card-content">
+								<p>CARD CONTENT (NO-IMAGE)</p>
+							</div>
+							<div class="card-footer">
+								<p>CARD FOOTER</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 pl-1">
+						<div class="card">
+							<div class="card-header">
+								<p>CARD HEADER 3</p>
+							</div>
+							<div class="card-content">
+								<p>CARD CONTENT (NO-IMAGE)</p>
+							</div>
+							<div class="card-footer">
+								<p>CARD FOOTER</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="h5">Con imagenes:</p>
+				<div class="row">
+					<div class="col-4 pl-1">
+						<div class="card">
+							<div class="card-header">
+								<p>CARD HEADER 1</p>
+							</div>
+							<div class="card-content">
+								<img src="./assets/images/header.jpg">
+							</div>
+							<div class="card-footer">
+								<p>CARD FOOTER</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 pl-1">
+						<div class="card">
+							<div class="card-header">
+								<p>CARD HEADER 2</p>
+							</div>
+							<div class="card-content">
+								<img src="./assets/images/header.jpg">
+							</div>
+							<div class="card-footer">
+								<p>CARD FOOTER</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 pl-1">
+						<div class="card">
+							<div class="card-header">
+								<p>CARD HEADER 3</p>
+							</div>
+							<div class="card-content">
+								<img src="./assets/images/header.jpg">
+							</div>
+							<div class="card-footer">
+								<p>CARD FOOTER</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<xmp>
+#HTML
+<div class="container">
+	<p class="h5">Sin imagenes:</p>
+	<div class="row">
+		<div class="col-4 pl-1">
+			<div class="card">
+				<div class="card-header">
+					<p>CARD HEADER 1</p>
+				</div>
+				<div class="card-content">
+					<p>CARD CONTENT (NO-IMAGE)</p>
+				</div>
+				<div class="card-footer">
+					<p>CARD FOOTER</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 pl-1">
+			<div class="card">
+				<div class="card-header">
+					<p>CARD HEADER 2</p>
+				</div>
+				<div class="card-content">
+					<p>CARD CONTENT (NO-IMAGE)</p>
+				</div>
+				<div class="card-footer">
+					<p>CARD FOOTER</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 pl-1">
+			<div class="card">
+				<div class="card-header">
+					<p>CARD HEADER 3</p>
+				</div>
+				<div class="card-content">
+					<p>CARD CONTENT (NO-IMAGE)</p>
+				</div>
+				<div class="card-footer">
+					<p>CARD FOOTER</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="h5">Con imagenes:</p>
+	<div class="row">
+		<div class="col-4 pl-1">
+			<div class="card">
+				<div class="card-header">
+					<p>CARD HEADER 1</p>
+				</div>
+				<div class="card-content">
+					<img src="./assets/images/header.jpg">
+				</div>
+				<div class="card-footer">
+					<p>CARD FOOTER</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 pl-1">
+			<div class="card">
+				<div class="card-header">
+					<p>CARD HEADER 2</p>
+				</div>
+				<div class="card-content">
+					<img src="./assets/images/header.jpg">
+				</div>
+				<div class="card-footer">
+					<p>CARD FOOTER</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 pl-1">
+			<div class="card">
+				<div class="card-header">
+					<p>CARD HEADER 3</p>
+				</div>
+				<div class="card-content">
+					<img src="./assets/images/header.jpg">
+				</div>
+				<div class="card-footer">
+					<p>CARD FOOTER</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+#CSS
+.card {
+  width: 100%;
+  text-align: center;
+  background-color: #d9d7d7;
+  border-radius: 0.5em;
+}
+
+.card .card-header {
+  border-bottom: 1px solid white;
+}
+
+.card .card-content {
+  margin: 0 auto;
+}
+
+.card .card-content img {
+  max-width: 100%;
+}
+
+.card .card-footer {
+  border-top: 1px solid white;
+}
+			</xmp>
+		</div>
+		<div class="element">
+			<h1>GRID</h1>
+			<div class="grid">
+				<div class="grid-cell">
+					<p class="mt-2">CELL 1</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 2</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 3</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 4</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 5</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 6</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 7</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 8</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 9</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 10</p>
+				</div>
+				<div class="grid-cell">
+					<p class="mt-2">CELL 11</p>
+				</div>
+				<div class="grid-cell mb-2">
+					<p class="mt-2">CELL 12</p>
+				</div>
+			</div>
+			<xmp>
+#HTML
+<div class="grid">
+	<div class="grid-cell">
+		<p class="mt-2">CELL 1</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 2</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 3</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 4</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 5</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 6</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 7</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 8</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 9</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 10</p>
+	</div>
+	<div class="grid-cell">
+		<p class="mt-2">CELL 11</p>
+	</div>
+	<div class="grid-cell mb-2">
+		<p class="mt-2">CELL 12</p>
+	</div>
+</div>
+
+#CSS
+.grid {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.grid .grid-cell {
+  background-color: #ddb3cc;
+  height: 5em;
+  text-align: center;
+}
+			</xmp>
+		</div>
+	</body>
+</html>
