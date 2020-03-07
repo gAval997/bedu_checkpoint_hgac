@@ -101,7 +101,7 @@
 			<div class="jumbotron">
 				<div class="cont pb-2">
 					<h1 class="pt-1">JUMBOTRON CONTENT</h1>
-					<button class="btn btn-info btn-lg" type="button">SALUDOS</button>
+					<button class="btn btn-info btn-lg" onclick="jumbotron_button()" type="button">SALUDOS</button>
 				</div>
 			</div>
 			<xmp>
@@ -165,10 +165,10 @@
 			<h1>BUTTONS AND COLORS BY MEANING</h1>
 			<div class="container-fluid">
 				<div class="center-content">
-					<button type="button" class="btn btn-lg btn-info">Info</button>
-					<button type="button" class="btn btn-lg btn-success">Success</button>
-					<button type="button" class="btn btn-lg btn-warning">Warning</button>
-					<button type="button" class="btn btn-lg btn-danger mb-2">Danger</button>
+					<button type="button" onclick="button_info()" class="btn btn-lg btn-info">Info</button>
+					<button type="button" onclick="button_success()" class="btn btn-lg btn-success">Success</button>
+					<button type="button" onclick="button_warning()" class="btn btn-lg btn-warning">Warning</button>
+					<button type="button" onclick="button_danger()" class="btn btn-lg btn-danger mb-2">Danger</button>
 				</div>
 			</div>
 			<xmp>
@@ -601,4 +601,5 @@
 			</xmp>
 		</div>
 	</body>
+	<script src="./assets/js/index.js"></script>
 </html>
